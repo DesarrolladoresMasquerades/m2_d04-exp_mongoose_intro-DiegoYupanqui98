@@ -11,8 +11,13 @@ require('./configs/database.config');
 // .create() is a mongoose method and under the hood uses insertOne and insertMany
 
 // create one document in the cats collection
-Cat
 
 // create multiple documents in the cats collection
 
-Cat
+Cat.create({
+    name: "Garfield",
+    age: 5,
+    color: "orange",
+    //THIS WILL BREAK THE SCHEMA BUT MONGO WILL NOT COMPLAIN
+    friends: ["marco", "carol", "carlos","Yin"]
+})
